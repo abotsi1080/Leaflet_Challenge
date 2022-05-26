@@ -30,7 +30,7 @@ function createFeatures(earthquakeData) {
     //Define a function that runs once for each feature in teh features array.
     //Give each feature a popup that place and time of the earthquake
     function onEachFeature(feature, layer) {
-        layer.bindPopup(`<h3>Magnitude: ${feature.properties.mag}<h3><hr><p>Location: ${new Date(feature.properties.place)}</
+        layer.bindPopup(`<h3>Magnitude: ${feature.properties.mag}<h3><hr><p>Location: ${(feature.properties.place)}</
         p>,p>Depth: ${(feature.geometry.coordinates[2])} km</p>`);
     }
 
@@ -56,7 +56,7 @@ function createFeatures(earthquakeData) {
 function createMap(earthquakes) {
 
     //Create the base layers.
-    var gray = L.tileLayer("https://maps.omniscale.net/v2/private-setordji-abotsi-4b2aefdb/style.grayscale/{z}/{x}/{y}.png", {
+    var gray = L.tileLayer("https://maps.omniscale.net/v2/setordji-abotsi-de01fc36/style.grayscale/{z}/{x}/{y}.png", {
         attribution: "©️ <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> ©️ <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     });
 
